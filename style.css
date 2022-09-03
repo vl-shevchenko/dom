@@ -181,6 +181,9 @@ a:visited {
 }
 
 @media (max-width: 900px) {
+body {
+height: 100vh;
+}
     .wrapper {
         flex-direction: column;
     }
@@ -241,7 +244,7 @@ a:visited {
     .popup.open {
         left: 0;
         background: rgba(255, 237, 224, 0.56);
-        backdrop-filter: blur(10px);
+        backdrop-filter: blur(30px);
     }
 
     .container-list {
