@@ -94,36 +94,5 @@ function burgerhandler(e) {
     e.preventDefault();
     popup.classList.toggle('open');
     renderPopup();
-
-    //повторно використовується
-    const menuButton = document.querySelector('.container-list');
-    menuButton.addEventListener('click', function (e) {
-        document.querySelector('.container').innerHTML = '';
-
-        let currentCity = e.target.innerHTML;
-        let info = '';
-        let color = '';
-        let name = '';
-        for (let i = 0; i < city.length; i++) {   //var замість let
-            if (city[i].name == currentCity) {
-                info = city[i].info;
-                color = city[i].color;
-                name = city[i].name;
-            }
-        }
-
-        document.body.style.backgroundImage = color;
-        let citiesName = document.querySelector('.name-city');
-        citiesName.innerHTML = `${name}`;
-        let citiesInfo = document.querySelector('.container');
-        citiesInfo.innerHTML = `<p class='info'>${info}</p>`;
-        //document.querySelector('.container').appendChild(citiesInfo);
-    });
-};
-
-//клонував меню
-const menuClone = document.querySelector('.container-list').cloneNode(true);
-function renderPopup() {
-    popup.appendChild(menuClone);
 };
 
