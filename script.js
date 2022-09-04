@@ -32,23 +32,15 @@ const city = [
     },
 ];
 
-//const defaultContent = city[0].info;
-
-//defaultContent//
-
 let defaultContent = document.querySelector('.container');
 defaultContent.innerHTML = `<p class='info'>${city[0].info}</p>`;
 document.body.style.backgroundImage = city[0].color;
 let defaultName = document.querySelector('.name-city');
 defaultName.innerText = `${city[0].name}`;
 
-
-//name city//
-
 const buildMenu = city => {
     document.querySelector('.nav__bloc').innerHTML = `<ul class='container-list'></ul>`;
-    //const items = [];
-    city.map((val) => {    //city.map((val, id) => {
+    city.map((val) => {
         let nameCity = document.createElement('li');
         nameCity.classList.add('menu-list');
         nameCity.innerHTML = `<a href="#" class='menu-link'>${val.name}</a>`;
@@ -58,9 +50,6 @@ const buildMenu = city => {
 };
 buildMenu(city);
 
-
-//background, info city//
-
 const menuButton = document.querySelector('.container-list');
 menuButton.addEventListener('click', function (e) {
     document.querySelector('.container').innerHTML = '';
@@ -69,7 +58,7 @@ menuButton.addEventListener('click', function (e) {
     let info = '';
     let color = '';
     let name = '';
-    for (let i = 0; i < city.length; i++) {   //var замість let
+    for (let i = 0; i < city.length; i++) {
         if (city[i].name == currentCity) {
             info = city[i].info;
             color = city[i].color;
@@ -82,11 +71,8 @@ menuButton.addEventListener('click', function (e) {
     citiesName.innerHTML = `${name}`;
     let citiesInfo = document.querySelector('.container');
     citiesInfo.innerHTML = `<p class='info'>${info}</p>`;
-    //document.querySelector('.container').appendChild(citiesInfo);
 });
 
-
-//burger
 const burger = document.querySelector('#burger');
 const popup = document.querySelector('#popup');
 burger.addEventListener('click', burgerhandler);

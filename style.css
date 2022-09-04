@@ -45,19 +45,15 @@ a:visited {
     text-decoration: none;
 }
 
-/*body*/
-
 .wrapper {
     display: flex;
 
 }
 
-/*navbar*/
 .container__nav {
     display: flex;
     width: 25%;
     padding: 2% 0 0 0;
-
 }
 
 .nav__bloc {
@@ -106,7 +102,6 @@ a:visited {
     align-items: center;
 }
 
-/*info*/
 .name-city {
     text-transform: uppercase;
     background: rgba(255, 237, 224, 0.56);
