@@ -79,6 +79,5 @@ burger.addEventListener('click', burgerhandler);
 function burgerhandler(e) {
     e.preventDefault();
     popup.classList.toggle('open');
-    renderPopup();
 };
 
