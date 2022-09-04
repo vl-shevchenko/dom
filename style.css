@@ -181,9 +181,14 @@ a:visited {
 }
 
 @media (max-width: 900px) {
-body {
-height: 90vh;
-}
+    body {
+        height: 100vh;
+    }
+
+    .container {
+        box-shadow: none;
+    }
+
     .wrapper {
         flex-direction: column;
     }
@@ -238,13 +243,13 @@ height: 90vh;
         height: 100%;
         z-index: 100;
         transition: 0.3s;
-
+        background: rgba(255, 237, 224, 0.56);
+        backdrop-filter: blur(120px);
     }
 
     .popup.open {
         left: 0;
-        background: rgba(255, 237, 224, 0.56);
-        backdrop-filter: blur(120px);
+
     }
 
     .container-list {
