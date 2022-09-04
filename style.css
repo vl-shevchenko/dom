@@ -244,6 +244,8 @@ a:visited {
         z-index: 100;
         transition: 0.3s;
         background: rgba(255, 237, 224, 0.94);
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
     }
 
     .popup.open {
