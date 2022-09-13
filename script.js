@@ -81,3 +81,9 @@ function burgerhandler(e) {
     popup.classList.toggle('open');
 };
 
+popup.addEventListener('click', burgerClose);
+function burgerClose(e) {
+    if (e.target.matches('a')) {
+        popup.classList.remove('open');
+    }
+};
