@@ -52,7 +52,7 @@ buildMenu(city);
 
 const menuButton = document.querySelector('.container-list');
 menuButton.addEventListener('click', function (e) {
-    document.querySelector('.container').innerHTML = '';
+
 
     let currentCity = e.target.innerHTML;
     let info = '';
@@ -63,14 +63,20 @@ menuButton.addEventListener('click', function (e) {
             info = city[i].info;
             color = city[i].color;
             name = city[i].name;
-        }
+        };
+    };
+    if (e.target.matches('a')) {
+        document.body.style.backgroundImage = color;
+        let citiesName = document.querySelector('.name-city');
+        document.querySelector('.container').innerHTML = '';
+        citiesName.innerHTML = `${name}`;
+        let citiesInfo = document.querySelector('.container');
+        citiesInfo.innerHTML = `<p class='info'>${info}</p>`;
+    } else {
+
+
     }
 
-    document.body.style.backgroundImage = color;
-    let citiesName = document.querySelector('.name-city');
-    citiesName.innerHTML = `${name}`;
-    let citiesInfo = document.querySelector('.container');
-    citiesInfo.innerHTML = `<p class='info'>${info}</p>`;
 });
 
 const burger = document.querySelector('#burger');
@@ -85,5 +91,5 @@ popup.addEventListener('click', burgerClose);
 function burgerClose(e) {
     if (e.target.matches('a')) {
         popup.classList.remove('open');
-    }
+    };
 };
