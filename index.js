@@ -72,9 +72,6 @@ menuButton.addEventListener('click', function (e) {
         citiesName.innerHTML = `${name}`;
         let citiesInfo = document.querySelector('.container');
         citiesInfo.innerHTML = `<p class='info'>${info}</p>`;
-    } else {
-
-
     }
 
 });
