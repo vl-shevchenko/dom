@@ -78,15 +78,17 @@ menuButton.addEventListener('click', function (e) {
 
 const burger = document.querySelector('#burger');
 const popup = document.querySelector('#popup');
-burger.addEventListener('click', burgerhandler);
-function burgerhandler(e) {
+burger.addEventListener('click', burgerHandler);
+function burgerHandler(e) {
     e.preventDefault();
     popup.classList.toggle('open');
+    burger.classList.toggle('active');
 };
 
 popup.addEventListener('click', burgerClose);
 function burgerClose(e) {
     if (e.target.matches('a')) {
         popup.classList.remove('open');
+        burger.classList.remove('active');
     };
 };
