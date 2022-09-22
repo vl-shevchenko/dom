@@ -38,6 +38,7 @@ const burger = document.querySelector('#burger');
 const popup = document.querySelector('#popup');
 
 citiesInfo.innerHTML = `<p class='info'>${city[0].info}</p>`;
+citiesName.innerHTML = city[0].name;
 document.body.style.backgroundImage = city[0].image;
 
 const buildMenu = city => {
