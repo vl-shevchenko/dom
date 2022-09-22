@@ -41,19 +41,22 @@ citiesInfo.innerHTML = `<p class='info'>${city[0].info}</p>`;
 citiesName.innerHTML = city[0].name;
 document.body.style.backgroundImage = city[0].image;
 
+document.querySelector('.nav__bloc').innerHTML = `<ul class='container-list'></ul>`;
+const menuButton = document.querySelector('.container-list');
+
 const buildMenu = city => {
-    document.querySelector('.nav__bloc').innerHTML = `<ul class='container-list'></ul>`;
     city.map((val) => {
         let nameCity = document.createElement('li');
         nameCity.classList.add('menu-list');
         nameCity.innerHTML = `<a href="#" class='menu-link'>${val.name}</a>`;
-        document.querySelector('.container-list').appendChild(nameCity);
+        menuButton.appendChild(nameCity);
     });
 };
 buildMenu(city);
 
-const menuButton = document.querySelector('.container-list');
-menuButton.addEventListener('click', function (e) {
+
+menuButton.addEventListener('click', changeContent)
+function changeContent(e) {
     let currentCity = e.target.innerHTML;
     let info = '';
     let image = '';
@@ -71,7 +74,7 @@ menuButton.addEventListener('click', function (e) {
         citiesName.innerHTML = `${name}`;
         citiesInfo.innerHTML = `<p class='info'>${info}</p>`;
     }
-});
+};
 
 burger.addEventListener('click', burgerHandler);
 function burgerHandler(e) {
